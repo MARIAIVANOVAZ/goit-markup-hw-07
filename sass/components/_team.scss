@@ -1,0 +1,83 @@
+.team{
+    background-color: $secondary-background-color;
+
+
+    &__name{
+        margin-bottom: 10px;
+        margin-top: 0;
+        color: $secondary-text-color;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+    }
+
+    &__profession{
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+    }
+
+    &__list{
+        display: flex;
+    }
+
+    &__card{
+    width: 270px;
+
+    border-radius: left 4px;
+    border-radius: right 4px;
+    box-shadow:  0px 2px 1px rgba(0, 0, 0, 0.2), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+    
+    }
+
+    &__card + &__card{
+        margin-left: 30px;
+    }
+
+    &__description{
+        border: 1px solid  rgba(255, 255, 255, 1);
+        border-top: none;
+        background-color: $white-color ;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+} 
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 16px;  
+    
+
+    &__link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        fill: $fill-icon;
+
+        transition: fill 250ms $cubic-bezier, 
+        background-color 250ms $cubic-bezier ;
+    }
+    &__link:hover,
+    &__link:focus{
+        fill: $white-color ;
+        background-color: $accent-color;
+    }
+    &__logo{
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+    }
+    &__item + &__item{
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,42 @@
+.client{
+    display: flex;
+
+
+
+    &__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 92px;
+        width: 170px;
+        border: 1px solid $fill-icon;
+        border-radius: 4px;
+        
+        transition: border 250ms $cubic-bezier;
+    
+    }
+    &__item + &__item{
+        margin-left: 30px;
+    }
+    &__item:hover,
+    &__item:focus {
+        border: 1px solid  $accent-color; 
+    }
+
+    &__logo:hover &__icon,
+    &__logo:focus &__icon{
+        fill: $accent-color ;
+    }
+
+
+
+    &__icon{
+        width: 106px;
+        height: 60px;
+
+        fill: $fill-icon;
+
+        transition:  fill 250ms $cubic-bezier ;
+    }
+}
